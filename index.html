@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Matching Game</title>
+  <meta content="" name="description">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="stylesheet" media="screen and (min-width: 500px)" href="styles/app.css">
+  <link rel="stylesheet" media="screen and (min-width: 800px)" href="styles/app.css">
+  <link rel="stylesheet" media="screen and (min-width: 1200px)" href="styles/app.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet prefetch">
+  <link href="styles/app.css" rel="stylesheet">
+</head>
+<body>
+  <main>
+  <div class="container">
+    <header>
+      <h1>Matching Game</h1>
+    </header>
+    <section class="score-panel">
+      <ul class="ratings">
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+      </ul><span class="moves">3</span> Moves
+      <div class="timeTicker">
+        00:00:00
+      </div>
+      <div class="restart" onclick="restart()">
+        <i class="fa fa-repeat"></i>
+      </div>
+    </section>
+    <ul class="deck" id="card-deck">
+      <li class="card" data-ct="d-1"><i class="fa fa-diamond"></i></li>
+      <li class="card" data-ct="p-1"><i class="fa fa-paper-plane-o"></i></li>
+      <li class="card match" data-ct="a-1"><i class="fa fa-anchor"></i></li>
+      <li class="card" data-ct="bt-1"><i class="fa fa-bolt"></i></li>
+      <li class="card" data-ct="c-1"><i class="fa fa-cube"></i></li>
+      <li class="card match" data-ct="a-2"><i class="fa fa-anchor"></i></li>
+      <li class="card" data-ct="l-1"><i class="fa fa-leaf"></i></li>
+      <li class="card" data-ct="bic-1"><i class="fa fa-bicycle"></i></li>
+      <li class="card" data-ct="d-2"><i class="fa fa-diamond"></i></li>
+      <li class="card" data-ct="bb-1"><i class="fa fa-bomb"></i></li>
+      <li class="card" data-ct="l-2"><i class="fa fa-leaf"></i></li>
+      <li class="card" data-ct="bb-2"><i class="fa fa-bomb"></i></li>
+      <li class="card open show" data-ct="bt-2"><i class="fa fa-bolt"></i></li>
+      <li class="card" data-ct="bic-2"><i class="fa fa-bicycle"></i></li>
+      <li class="card" data-ct="p-2"><i class="fa fa-paper-plane-o"></i></li>
+      <li class="card" data-ct="c-2"><i class="fa fa-cube"></i></li>
+    </ul>
+    <div id="overlay">
+      <div class="content">
+        <h2>Well done!</h2><a class="close" href="#">×</a>
+        <div class="details">
+          <p>You made <span id="lastMove"></span> moves</p>
+          <p>in <span id="totalTime"></span></p>
+          <p><span id="rating"></span></p>
+        </div><button id="restart" onclick="restart()">Restart</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js">
+  </script>
+  </main>
+</body>
+</html>
